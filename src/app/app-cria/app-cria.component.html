@@ -2,7 +2,7 @@
   <div class="container">
     <div class="barra_nome">
       <p class="label">Nome:</p>
-      <input type="text" placeholder="Nome" class="input" [(ngModel)]="nome" />
+      <input type="text" placeholder="Nome" class="input" [(ngModel)]="nome" required="nome"/>
     </div>
     <div class="barra_nome">
       <p class="label">Telefone:</p>
@@ -19,11 +19,11 @@
         type="text"
         placeholder="E-mail"
         class="input"
-        [(ngModel)]="email"
+        [(ngModel)]="email" required email
       />
     </div>
     <div class="radio">
-      <input type="radio" (click)="show = !show" /> Quero me cadastrar com CNPJ
+      <input type="radio" (click)="show = !show" /> Quero me cadastrar com CNPJ/>
     </div>
     <div class="barra_nome" *ngIf="show">
       <p class="label">CPF:</p>

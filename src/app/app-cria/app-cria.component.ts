@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-cria',
@@ -8,13 +9,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppCriaComponent {
   show = true;
-  nome: string = '';
+  nome: string ='';
   email: string = '';
   telefone: string = '';
   cpf: string = '';
   cnpj: string = '';
-  url = 'https://sat-project.herokuapp.com';
+  url = 'http://localhost:4200';
   constructor(private httpClient: HttpClient) {}
+
+  validaObrigatoriedade(input: FormControl){
+    return (input.value ? null : { obrigatoriedade: true});
+  }
   postApi(
     nome: string,
     email: string,
