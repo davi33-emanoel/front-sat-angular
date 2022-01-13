@@ -9,14 +9,13 @@ import { FormControl } from '@angular/forms';
 })
 export class AppCriaComponent {
   show = true;
-  nome: string ='';
+  nome: string = '';
   email: string = '';
   telefone: string = '';
   cpf: string = '';
   cnpj: string = '';
-  url = 'http://localhost:4200';
+  url = 'https://sat-project.herokuapp.com';
   constructor(private httpClient: HttpClient) {}
-
   validaObrigatoriedade(input: FormControl){
     return (input.value ? null : { obrigatoriedade: true});
   }
