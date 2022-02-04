@@ -34,7 +34,7 @@ export class AppCriaComponent {
       cnpj,
     };
     this.httpClient
-      .post<any>(this.url + '/clients/save', obj, {
+      .post<any>(this.url + '/save', obj, {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
           Accept: 'application/json',
