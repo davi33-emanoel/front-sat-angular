@@ -44,6 +44,7 @@ export class AppCriaComponent {
       .subscribe((data) => {
         console.log(data);
         location.reload();
+        return data;
       });
   }
 }
