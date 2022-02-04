@@ -14,7 +14,7 @@ export class AppCriaComponent {
   telefone: string = '';
   cpf: string = '';
   cnpj: string = '';
-  url = 'https://sat-project.herokuapp.com';
+  url = 'http://sat-project.herokuapp.com';
   constructor(private httpClient: HttpClient) {}
   validaObrigatoriedade(input: FormControl){
     return (input.value ? null : { obrigatoriedade: true});
