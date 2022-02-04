@@ -37,7 +37,7 @@ export class AppCriaComponent {
       .post<any>(this.url + '/clients/save', obj, {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
-          Accept: 'application/json',
+          'Accept': 'application/json',
           'Access-Control-Allow-Origin': '*',
         }),
       })
