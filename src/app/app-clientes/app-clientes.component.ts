@@ -23,10 +23,9 @@ export class AppClientesComponent implements OnInit {
     this.httpClient
       .delete(this.url + `/clients/delete/${id}`, {
         headers: new HttpHeaders({
-          dataType: 'jsonp',
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:4200',
+          'Access-Control-Allow-Origin': '*',
         }),
       })
       .subscribe((data) => {

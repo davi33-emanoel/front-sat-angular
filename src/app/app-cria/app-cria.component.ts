@@ -38,7 +38,7 @@ export class AppCriaComponent {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:4200',
+          'Access-Control-Allow-Origin': '*',
         }),
       })
       .subscribe((data) => {
