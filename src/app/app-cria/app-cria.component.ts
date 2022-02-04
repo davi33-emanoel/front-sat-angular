@@ -14,7 +14,7 @@ export class AppCriaComponent {
   telefone: string = '';
   cpf: string = '';
   cnpj: string = '';
-  url = 'http://sat-project.herokuapp.com';
+  url = 'https://sat-project.herokuapp.com';
   constructor(private httpClient: HttpClient) {}
   validaObrigatoriedade(input: FormControl){
     return (input.value ? null : { obrigatoriedade: true});
@@ -38,13 +38,12 @@ export class AppCriaComponent {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:4200',
+          'Access-Control-Allow-Origin': 'https://localhost:4200',
         }),
       })
       .subscribe((data) => {
         console.log(data);
         location.reload();
-        return data;
       });
   }
 }
